@@ -6,7 +6,6 @@ require_once "../modelos/productos.modelo.php";
 require_once "../controladores/categorias.controlador.php";
 require_once "../modelos/categorias.modelo.php";
 
-
 class TablaProductos{
 
  	/*=============================================
@@ -79,7 +78,6 @@ class TablaProductos{
   				 $botones =  "<div class='btn-group'><button class='btn btn-warning btnEditarProducto' idProducto='".$productos[$i]["id"]."' data-toggle='modal' data-target='#modalEditarProducto'><i class='fa fa-pencil'></i></button><button class='btn btn-danger btnEliminarProducto' idProducto='".$productos[$i]["id"]."' codigo='".$productos[$i]["codigo"]."' imagen='".$productos[$i]["imagen"]."'><i class='fa fa-times'></i></button></div>"; 
 
   			}
-
 		 
 		  	$datosJson .='[
 			      "'.($i+1).'",
@@ -106,9 +104,6 @@ class TablaProductos{
 
 
 	}
-
-
-
 }
 
 /*=============================================
@@ -116,4 +111,3 @@ ACTIVAR TABLA DE PRODUCTOS
 =============================================*/ 
 $activarProductos = new TablaProductos();
 $activarProductos -> mostrarTablaProductos();
-

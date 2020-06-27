@@ -15,11 +15,8 @@ class AjaxUsuarios{
 
 		$item = "id";
 		$valor = $this->idUsuario;
-
 		$respuesta = ControladorUsuarios::ctrMostrarUsuarios($item, $valor);
-
 		echo json_encode($respuesta);
-
 	}
 
 	/*=============================================
@@ -33,15 +30,11 @@ class AjaxUsuarios{
 	public function ajaxActivarUsuario(){
 
 		$tabla = "usuarios";
-
 		$item1 = "estado";
 		$valor1 = $this->activarUsuario;
-
 		$item2 = "id";
 		$valor2 = $this->activarId;
-
 		$respuesta = ModeloUsuarios::mdlActualizarUsuario($tabla, $item1, $valor1, $item2, $valor2);
-
 	}
 
 	/*=============================================
@@ -58,7 +51,6 @@ class AjaxUsuarios{
 		$respuesta = ControladorUsuarios::ctrMostrarUsuarios($item, $valor);
 
 		echo json_encode($respuesta);
-
 	}
 }
 
@@ -95,5 +87,4 @@ if(isset( $_POST["validarUsuario"])){
 	$valUsuario = new AjaxUsuarios();
 	$valUsuario -> validarUsuario = $_POST["validarUsuario"];
 	$valUsuario -> ajaxValidarUsuario();
-
 }

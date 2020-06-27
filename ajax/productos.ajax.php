@@ -2,7 +2,6 @@
 
 require_once "../controladores/productos.controlador.php";
 require_once "../modelos/productos.modelo.php";
-
 require_once "../controladores/categorias.controlador.php";
 require_once "../modelos/categorias.modelo.php";
 
@@ -24,7 +23,6 @@ class AjaxProductos{
   	echo json_encode($respuesta);
 
   }
-
 
   /*=============================================
   EDITAR PRODUCTO
@@ -71,11 +69,8 @@ class AjaxProductos{
       echo json_encode($respuesta);
 
     }
-
   }
-
 }
-
 
 /*=============================================
 GENERAR CÓDIGO A PARTIR DE ID CATEGORIA
@@ -86,8 +81,8 @@ if(isset($_POST["idCategoria"])){
 	$codigoProducto = new AjaxProductos();
 	$codigoProducto -> idCategoria = $_POST["idCategoria"];
 	$codigoProducto -> ajaxCrearCodigoProducto();
-
 }
+
 /*=============================================
 EDITAR PRODUCTO
 =============================================*/ 
@@ -97,7 +92,6 @@ if(isset($_POST["idProducto"])){
   $editarProducto = new AjaxProductos();
   $editarProducto -> idProducto = $_POST["idProducto"];
   $editarProducto -> ajaxEditarProducto();
-
 }
 
 /*=============================================
@@ -109,7 +103,6 @@ if(isset($_POST["traerProductos"])){
   $traerProductos = new AjaxProductos();
   $traerProductos -> traerProductos = $_POST["traerProductos"];
   $traerProductos -> ajaxEditarProducto();
-
 }
 
 /*=============================================
@@ -121,7 +114,6 @@ if(isset($_POST["nombreProducto"])){
   $traerProductos = new AjaxProductos();
   $traerProductos -> nombreProducto = $_POST["nombreProducto"];
   $traerProductos -> ajaxEditarProducto();
-
 }
 
 
